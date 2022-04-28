@@ -1,0 +1,292 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Sora:wght@300;400;600&display=swap");
+:root {
+  --SecondFont: "Playfair Display", serif;
+  --MainFont: "Sora", sans-serif;
+  --Light: 300;
+  --Regular: 400;
+  --bold: 600;
+  --body-font-size: 1.3rem;
+  --normal-font-size: 1.1rem;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #fbda61;
+  background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+header {
+  width: 100%;
+  padding: 3rem 0;
+}
+.nav {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-self: center;
+  justify-content: space-between;
+  width: 800px;
+  margin: auto;
+}
+.logo {
+  font-family: var(--SecondFont);
+  font-size: 2em;
+}
+.btn-theme {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-family: var(--MainFont);
+  font-weight: var(--Regular);
+  font-size: var(--body-font-size);
+  padding: 0.9rem 0.7rem;
+  border-radius: 10px;
+}
+.btn-icon {
+  font-size: var(--body-font-size);
+  padding-left: 3px;
+}
+.btn-theme:hover {
+  border-radius: 10px;
+  background-color: white;
+  color: transparent;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.container {
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  grid-template-rows: 0.6fr 1.4fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  justify-content: stretch;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas:
+    "Search-area Search-area"
+    "Content-area Content-area";
+}
+
+.Search-area {
+  justify-self: center;
+  grid-area: Search-area;
+  width: 800px;
+  height: 1.5rem;
+}
+.Search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  height: 100%;
+  border-radius: 10px;
+  padding: 0.9rem 0.9rem;
+}
+.icon-search {
+  font-size: var(--body-font-size);
+  color: white;
+}
+.btn-search {
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 0;
+  font-size: var(--normal-font-size);
+  font-family: var(--MainFont);
+  color: white;
+  padding: 0.8rem;
+}
+.search-input {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0 0.2rem;
+  font-size: var(--normal-font-size);
+  font-family: var(--MainFont);
+  color: white;
+}
+.search-input::placeholder {
+  color: #58353f59;
+}
+.search-input:focus-visible {
+  outline: none;
+  color: white;
+}
+
+.Content-area {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "userinfo"
+    "userstats";
+  justify-self: center;
+  align-self: start;
+  grid-area: Content-area;
+  width: 800px;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  height: 50vh;
+}
+.userinfo {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "profilepic basicinfos";
+  grid-area: userinfo;
+  align-items: center;
+}
+.profilepic {
+  grid-area: profilepic;
+  display: grid;
+  align-items: baseline;
+  justify-content: center;
+}
+.basicinfos {
+  grid-area: basicinfos;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem 0 0.5rem;
+}
+.profile_pic {
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+}
+.p1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.username-container {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  width: fit-content;
+}
+.user-fullname {
+  font-size: 2rem;
+  font-family: var(--MainFont);
+  font-weight: var(--Regular);
+  color: white;
+  margin: 0;
+}
+.user-username {
+  font-size: 1rem;
+  font-family: var(--MainFont);
+  font-weight: var(--Regular);
+  color: whitesmoke;
+}
+.user-dateofjoin {
+  font-size: 1rem;
+  font-family: var(--MainFont);
+  font-weight: var(--Regular);
+  color: whitesmoke;
+}
+.profilebio {
+  font-size: 1rem;
+  font-family: var(--MainFont);
+  font-weight: var(--Regular);
+  color: #58353f59;
+}
+.userstats {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: ". .";
+  grid-area: userstats;
+}
+.statics {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: rgba(47, 47, 47, 0.35);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 90%;
+  padding: 0.7rem 0rem;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.col-title {
+  font-family: var(--MainFont);
+  font-weight: var(--Regular);
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.836);
+  padding-bottom: 0.2rem;
+}
+.col-content {
+  font-family: var(--MainFont);
+  font-weight: var(--bold);
+  font-size: 1.2rem;
+  color: white;
+}
+.socialmedia {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1rem;
+}
+.icon-sc {
+  font-size: 1.2rem;
+  color: white;
+}
+.sc-content {
+  font-family: var(--MainFont);
+  font-weight: var(--Regular);
+  color: white;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+}
+/*==================== MEDIA QUERIES ====================*/
+/* For small devices */
+@media screen and (max-width: 350px) {
+}
+/* For medium devices */
+@media screen and (max-width: 672px) {
+  .p1 {
+    flex-direction: column;
+  }
+  .user-dateofjoin {
+    padding-top: 3px;
+  }
+}
+/* For large devices */
+@media screen and (max-width: 850px) {
+  .nav,
+  .Search-area,
+  .Content-area {
+    width: 40rem;
+  }
+  .profile_pic {
+    height: 110px;
+    width: 110px;
+  }
+}
