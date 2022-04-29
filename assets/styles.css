@@ -144,7 +144,9 @@ header {
   -webkit-backdrop-filter: blur(12px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  height: 50vh;
+  height: fit-content;
+  padding: 2rem 0;
+  margin: 2rem 0;
 }
 .userinfo {
   display: grid;
@@ -153,7 +155,7 @@ header {
   gap: 0px 0px;
   grid-template-areas: "profilepic basicinfos";
   grid-area: userinfo;
-  align-items: center;
+  align-items: end;
 }
 .profilepic {
   grid-area: profilepic;
@@ -195,7 +197,7 @@ header {
   font-size: 1rem;
   font-family: var(--MainFont);
   font-weight: var(--Regular);
-  color: whitesmoke;
+  color: #161616cc;
 }
 .user-dateofjoin {
   font-size: 1rem;
@@ -207,7 +209,7 @@ header {
   font-size: 1rem;
   font-family: var(--MainFont);
   font-weight: var(--Regular);
-  color: #58353f59;
+  color: #fff;
 }
 .userstats {
   display: grid;
@@ -222,7 +224,6 @@ header {
   flex-direction: row;
   justify-content: space-around;
   background: rgba(47, 47, 47, 0.35);
-
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 10px;
@@ -267,19 +268,53 @@ header {
 }
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
-@media screen and (max-width: 350px) {
-}
-/* For medium devices */
 @media screen and (max-width: 672px) {
+  body {
+    padding: 0;
+    margin: 0;
+    background-color: #fbda61;
+    background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .nav,
+  .Search-area,
+  .Content-area {
+    width: 90%;
+  }
+  .profile_pic {
+    width: 90%;
+    height: 100%;
+  }
   .p1 {
     flex-direction: column;
   }
   .user-dateofjoin {
-    padding-top: 3px;
+    padding-top: 10px;
+  }
+  .user-fullname {
+    font-size: 1.6rem;
+  }
+  .user-username {
+    font-size: 0.9rem;
   }
 }
-/* For large devices */
-@media screen and (max-width: 850px) {
+/* For medium devices */
+@media screen and (max-width: 800px) {
+  .nav,
+  .Search-area,
+  .Content-area {
+    width: 90%;
+  }
+  .profile_pic {
+    height: 100px;
+    width: 100px;
+  }
+}
+/* For large devices
+@media screen and (min-width: 850px) {
   .nav,
   .Search-area,
   .Content-area {
@@ -288,5 +323,5 @@ header {
   .profile_pic {
     height: 110px;
     width: 110px;
-  }
-}
+  } */
+/* } */
