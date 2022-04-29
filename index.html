@@ -7,79 +7,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Git Find</title>
     <!----------------------Unicons CDN---------------------->
-
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 
-<body>
+<body class="light">
     <header class="header">
         <nav class="nav">
             <a class="logo"> FindMeOnGithub</a>
-            <button class="btn-theme">Dark <i class="uil uil-moon btn-icon"></i></button>
+            <button class="btn-theme" id="btn-theme"><span id="themename">Dark</span> <i class="uil uil-moon btn-icon"
+                    id="themeicon"></i></button>
         </nav>
     </header>
     <main>
+
         <div class="container">
+
             <div class="Search-area">
-                <form action="/" class="Search-form">
+                <form action="/" method="post" class="Search-form">
                     <i class="uil uil-search icon-search"></i>
-                    <input type="text" class="search-input" placeholder="Search Github Username ...">
-                    <button type="submit" class="btn-search"> Search</button>
+                    <input type="text" class="search-input" name="searchquery" placeholder="Search Github Username ...">
+                    <button type="submit" class="btn-search" id="btn-search"> Search</button>
                 </form>
             </div>
             <div class="Content-area">
-                <div class="userinfo">
+                <div id="load" class="non-visible">
+                    <div>G</div>
+                    <div>N</div>
+                    <div>I</div>
+                    <div>D</div>
+                    <div>A</div>
+                    <div>O</div>
+                    <div>L</div>
+                </div>
+                <div class="userinfo" id="u1">
                     <div class="profilepic">
-                        <img src="assets/img/Default.jpg" alt="User Profile Picture" class="profile_pic">
+                        <img src="" id="profilepic" alt="User Profile Picture" class="profile_pic">
                     </div>
                     <div class="basicinfos">
                         <div class="p1">
                             <div class="username-container">
-                                <h1 class="user-fullname">User Name</h1>
+                                <h1 class="user-fullname" id="user-fullname">User Name</h1>
                                 <span id="username" class="user-username">@username</span>
                             </div>
                             <span id="dateofjoin" class="user-dateofjoin"> Joined 25 Jan 2021</span>
                         </div>
-                        <p class="profilebio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, autem
+                        <p class="profilebio" id="profilebio">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Maiores, autem
                             sapiente. Debitis ipsa possimus ex!</p>
 
                     </div>
                 </div>
 
-                <div class="userstats">
+                <div class="userstats" id="u2">
                     <div></div>
                     <div>
                         <div class="statics">
                             <div class="col">
                                 <span class="col-title">Repos</span>
-                                <span class="col-content">8</span>
+                                <span class="col-content" id="no_repos">-</span>
                             </div>
                             <div class="col">
                                 <span class="col-title">Followers</span>
-                                <span class="col-content">3938</span>
+                                <span class="col-content" id="no_followers">-</span>
                             </div>
                             <div class="col">
                                 <span class="col-title">Following</span>
-                                <span class="col-content">9</span>
+                                <span class="col-content" id="no_following">-</span>
                             </div>
                         </div>
                         <div class="socialmedia">
                             <div class="sc">
                                 <i class="uil uil-location-point icon-sc"></i>
-                                <span class="sc-content">San Fransico</span>
+                                <span class="sc-content" id="location">San Fransico</span>
                             </div>
                             <div class="sc">
                                 <i class="uil uil-twitter icon-sc"></i>
-                                <span class="sc-content">@tweet</span>
+                                <span class="sc-content" id="tweet">@tweet</span>
                             </div>
                             <div class="sc">
                                 <i class="uil uil-link icon-sc"></i>
-                                <span class="sc-content">github.blog</span>
+                                <a class="sc-content" id="link" target="_blank"> github.blog</a>
                             </div>
                             <div class="sc">
                                 <i class="uil uil-building icon-sc"></i>
-                                <span class="sc-content">@org</span>
+                                <span class="sc-content" id="org">@org</span>
                             </div>
                         </div>
                     </div>
@@ -87,7 +99,14 @@
             </div>
         </div>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="footer_container">
+            <a class="attr" href="www.aymendev1.com"> Coded With <i class="uil uil-heart footer-icon"></i> By :
+                AymenDev1 </a>
+            <span class="footercopy">&#169; All right reserved</span>
+        </div>
+    </footer>
 </body>
+<script src="/assets/script.js"></script>
 
 </html>
