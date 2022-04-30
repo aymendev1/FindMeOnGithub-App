@@ -45,7 +45,7 @@ async function getDefaultData() {
   } else {
     Org.innerText = user.LoadedData.company;
   }
-  if (user.LoadedData.blog === null) {
+  if (user.LoadedData.blog === "") {
     Link.innerText = "Not Specified ";
   } else {
     Link.innerText = user.LoadedData.blog;
@@ -125,3 +125,9 @@ function changetheme() {
   console.log(current_theme);
 }
 button.addEventListener("click", changetheme);
+
+/*==================== Prevent the Reload after submitting the form ====================*/
+
+$("form").submit(function (e) {
+  e.preventDefault();
+});
