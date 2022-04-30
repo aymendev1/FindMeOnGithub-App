@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Click Me !](https://github.com/aymendev1/GitFind)
-- Live Site URL: [Click Me !](https://adiveapp-aymendev1.netlify.app/)
+- Solution URL: [Click Me !](https://github.com/aymendev1/FindMeOnGithub-App)
+- Live Site URL: [Click Me !](https://findmeongithub-app.herokuapp.com//)
 
 ### Built with
 
