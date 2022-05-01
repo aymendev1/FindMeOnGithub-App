@@ -40,6 +40,6 @@ app.post("/", (req, res) => {
   SearchRequest = String(req.body.searchquery);
   RunSearch();
 });
-app.listen(process.env.port, () => {
+app.listen(process.env.PORT, () => {
   console.log("Server listenning ");
 });
