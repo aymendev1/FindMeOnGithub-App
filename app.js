@@ -29,7 +29,6 @@ function RunSearch() {
       let url = `https://api.github.com/users/${SearchRequest}`;
       const infodata = await fetch(url);
       const LoadedData = await infodata.json();
-      console.log(LoadedData);
       return res.status(200).json({ LoadedData });
     } catch (e) {
       res.status(400).json({ sucess: false, data: e });

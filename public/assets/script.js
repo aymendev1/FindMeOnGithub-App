@@ -16,7 +16,6 @@ const BtnSearch = document.getElementById("btn-search");
 async function getDefaultData() {
   const data = await fetch("/defaultinfos");
   const user = await data.json();
-  console.log(user.LoadedData.name);
   //Setting up data
   User_fullname.innerText = user.LoadedData.name;
   Username.innerText = "@" + user.LoadedData.login;
@@ -122,12 +121,7 @@ function changetheme() {
     button_name.innerText = "Dark";
     button_icon.classList.replace(light_icon, dark_icon);
   }
-  console.log(current_theme);
 }
 button.addEventListener("click", changetheme);
 
 /*==================== Prevent the Reload after submitting the form ====================*/
-
-$("form").submit(function (e) {
-  e.preventDefault();
-});
